@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+	
+	<style>
+	body {
+		background-color: powderblue;
+	}
+	h1   {
+		border: 2px solid black;
+		font-family: verdana;
+		font-size: 160%;
+		text-align: center;
+		padding: 15px;
+	}
+	h2 {
+		font-family: verdana;
+		font-size: 110%;
+		text-align: center;
+	}
+	h3 {
+		font-family: verdana;
+		font-size: 100%;
+		text-align: center;
+	}
+	p    {
+		color: red;
+		text-align: center;
+	}
+	</style>
+	
+</head>
+
+<body>
+	
+	<h1>Tissue Sample Collection</h1>
+	<h2>A system to keep track of samples and their characteristics within a larger collection of samples.</h2>
+	
+	<a class="nav-item nav-link" href="{{ url_for('new_collection') }}">New Collection</a>
+	<br>
+	<a class="nav-item nav-link" href="{{ url_for('new_sample') }}">New Sample</a>
+	
+	<br>
+	<br>
+	
+	<h3>Display a list of collections (with disease and title)</h3>
+	<p>Testing testing this is the paragraph</p>
+	
+</body>
+
+</html>

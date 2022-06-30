@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+	
+	<style>
+	body {
+		background-color: powderblue;
+	}
+	h1   {
+		border: 2px solid black;
+		font-family: verdana;
+		font-size: 160%;
+		text-align: center;
+		padding: 15px;
+	}
+	h2 {
+		font-family: verdana;
+		font-size: 110%;
+		text-align: center;
+	}
+	h3 {
+		font-family: verdana;
+		font-size: 100%;
+		text-align: center;
+	}
+	p    {
+		color: red;
+		text-align: center;
+	}
+	legend {
+		text-align: center;
+	}
+	</style>
+	
+</head>
+
+<body>
+	
+	<h1>Tissue Sample Collection</h1>
+	<h2>A system to keep track of samples and their characteristics within a larger collection of samples.</h2>
+	
+	<a class="nav-item nav-link" href="{{ url_for('home') }}">Home</a>
+	
+	<br>
+	<br>
+	
+	<h3>Insert new sample</h3>
+	<p>Add details for new sample below.</p>
+	
+	<!-- collection id, donor count, material type, last updated -->
+	
+	<form method="POST" action="">
+            {{ form.hidden_tag() }}
+            <fieldset class="form-group">
+                <legend class="border-bottom mb-4">New Sample</legend>
+				<br>
+                <div class="form-group">
+					{{ form.collection_id.label(class="form-control-label") }}	
+					{{ form.collection_id(class="form-control form-control-lg") }}
+                </div>
+				<br>
+                <div class="form-group">
+                    {{ form.donor_count.label(class="form-control-label") }}
+					{{ form.donor_count(class="form-control form-control-lg") }}
+                </div>
+				<br>
+				<div class="form-group">
+                    {{ form.material_type.label(class="form-control-label") }}
+					{{ form.material_type(class="form-control form-control-lg") }}
+                </div>
+				<br>
+				<div class="form-group">
+                    {{ form.last_updated.label(class="form-control-label") }}
+					{{ form.last_updated(class="form-control form-control-lg") }}
+                </div>
+            </fieldset>
+			<br>
+            <div class="form-group">
+                {{ form.submit(class="btn btn-outline-info") }}
+            </div>
+        </form>
+	
+</body>
+
+</html>
